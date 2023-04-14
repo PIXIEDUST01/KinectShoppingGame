@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Manager_15Anvy : MonoBehaviour
 {
@@ -20,11 +21,13 @@ public class Manager_15Anvy : MonoBehaviour
     public Transform[] SpawnPoints;
     public GameObject[] RandomGifts;
     public bool IsGameStarted;
+    public bool IsGameFinished;
     public int randomIndex;
     // Start is called before the first frame update
     void Start()
     {
         IsGameStarted = false;
+        IsGameFinished = false;
         time = 30f;
         MinDelay = 15f;
         MaxDelay = 22f;
@@ -60,6 +63,14 @@ public class Manager_15Anvy : MonoBehaviour
             TimerText.text = "Timer : " + " " + (Mathf.Floor(time % 60f).ToString("00"));
             Debug.Log("TImeUp");
 
+        }
+        if (IsGameFinished)
+        {
+            StartCoroutine(ReloadStartScene());
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(0);
         }
     }
     public void Timer()
@@ -103,6 +114,11 @@ public class Manager_15Anvy : MonoBehaviour
         RandomGifts[randomIndex].SetActive(true);
         
     }
+    public IEnumerator ReloadStartScene()
+    {
+        yield return new WaitForSeconds(10f);
+        SceneManager.LoadScene(0);
+    }
     public void StartGame()
     {
         GameScreen.SetActive(true);
@@ -114,12 +130,14 @@ public class Manager_15Anvy : MonoBehaviour
         GameScreen.SetActive(false);
         CongratsScreen.SetActive(true);
         TimerText.gameObject.SetActive(false);
-       // IsGameStarted = true;
+        // IsGameStarted = true;
+        IsGameFinished = true;
     }
     public void LostGift()
     {
         GameScreen.SetActive(false);
         LostScreen.SetActive(true);
         TimerText.gameObject.SetActive(false);
+        IsGameFinished = true;
     }
 }

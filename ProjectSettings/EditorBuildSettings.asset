@@ -14,7 +14,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/OopsScreen.unity
     guid: e58d8f718069a9e468cb6dc6bda33813
-  - enabled: 1
+  - enabled: 0
     path: Assets/KinectThoughts/Scenes/KinectThink.unity
     guid: 99f99b504de7a0643b25ee56cdf27939
+  - enabled: 1
+    path: Assets/15ThAniversarry/Scenes/StartScene_15Anvy.unity
+    guid: ab4d50c73ca3c4f4193d6986ba1bf15c
+  - enabled: 1
+    path: Assets/15ThAniversarry/Scenes/15ThAniverssary_Main.unity
+    guid: 94ff59c0c666b0c4d8c004c3e9a2f183
   m_configObjects: {}
