@@ -612,7 +612,7 @@ GameObject:
   - component: {fileID: 224189887}
   - component: {fileID: 224189886}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: Flowers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5352,7 +5352,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1771162415}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90, y: 90, z: -90}
 --- !u!1 &253789599
 GameObject:
@@ -6064,7 +6064,7 @@ Transform:
   - {fileID: 90729017}
   - {fileID: 1091855683}
   m_Father: {fileID: 1771162415}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &925045778
 GameObject:
@@ -6418,7 +6418,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.47450984, g: 0.69411767, b: 0.9568628, a: 0}
+  m_BackGroundColor: {r: 0.34117648, g: 0.5254902, b: 0.7803922, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -7161,7 +7161,7 @@ Transform:
   - {fileID: 1006372088}
   - {fileID: 925045779}
   m_Father: {fileID: 1771162415}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1771162414
 GameObject:
@@ -7190,9 +7190,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 224189888}
   - {fileID: 1592335319}
   - {fileID: 742926120}
+  - {fileID: 224189888}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7265,9 +7265,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Sorry!
-
-    You Lost.'
+  m_Text: "Better luck \nnext time!"
 --- !u!222 &1808732641
 CanvasRenderer:
   m_ObjectHideFlags: 0

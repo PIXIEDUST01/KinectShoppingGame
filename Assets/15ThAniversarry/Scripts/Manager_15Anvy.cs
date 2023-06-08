@@ -13,6 +13,7 @@ public class Manager_15Anvy : MonoBehaviour
     public float MaxDelay;
     public Text TimerText;
     public Text CountDownText;
+   // public ParticleSystem Flowers;
     public GameObject GameScreen;
     public GameObject CongratsScreen;
     public GameObject LostScreen;
@@ -95,7 +96,7 @@ public class Manager_15Anvy : MonoBehaviour
             countdowntime--;
         }
         CountDownText.text = "Go!";
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         CountDownText.gameObject.SetActive(false);
         StartGame();
         StartCoroutine(SpawnGift());
@@ -122,12 +123,14 @@ public class Manager_15Anvy : MonoBehaviour
     public void StartGame()
     {
         GameScreen.SetActive(true);
+       // Flowers.Play();
         TimerText.gameObject.SetActive(true);
         IsGameStarted = true;
     }
     public void WonGift()
     {
         GameScreen.SetActive(false);
+       // Flowers.Stop();
         CongratsScreen.SetActive(true);
         TimerText.gameObject.SetActive(false);
         // IsGameStarted = true;
@@ -136,6 +139,7 @@ public class Manager_15Anvy : MonoBehaviour
     public void LostGift()
     {
         GameScreen.SetActive(false);
+       // Flowers.Stop();
         LostScreen.SetActive(true);
         TimerText.gameObject.SetActive(false);
         IsGameFinished = true;
